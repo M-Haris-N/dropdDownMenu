@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.dropdowner {
+    list-style: none;
+    position: absolute;
+    display: none;
+    margin-left: 12px;
+}
+
+.dropdowner li {
+    padding: 0 10px;
+    height: 30px;
+    line-height: 30px;
+    text-align: left;
+    background-color: turquoise;
+    color:whitesmoke;
+}
+
+.dropper:hover .dropdowner {
+    display: inline-block;
+}
+
+.dropper {
+    list-style: none;
+    background-color: turquoise;
+    width: 120px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: whitesmoke;
+    font-weight: bold;
+}
+
+.dropper:hover {
+    background-color: whitesmoke;
+    color: turquoise;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100%;
+    height: 50px;
+    background-color: teal;
+}
+
+.rowdrop {
+    display: inline-block;
+    height: 49px;
+    width: 150px;
+    line-height: 50px;
+    text-align: center;
+    color: azure;
+    font-weight: bold;
+    margin-left: -5px;
+}
+
+.rowdrop:hover {
+    background-color: azure;
+    color: teal;
+    border-bottom: 1px solid teal;
+}
+
+.rowdrop-list {
+    display: none; 
+    list-style: none;
+    color: teal;
+    position: absolute;
+}
+
+.rowdrop-list li {
+    background-color: azure;
+    width: 150px;
+}
+
+.rowdrop-list li:hover {
+    background-color: darkturquoise;
+    color: aliceblue;
+}
+
+.rowdrop:hover .rowdrop-list {
+    display: block;
+    animation-name: rowdrop-list;
+    animation-duration: 0.5s;
+}
+
+@keyframes rowdrop-list {
+    0% {
+        transform: rotateX(90deg);
+        transform-origin: 0% 0%;
+    }
+    100% {
+        transform: rotateX(0deg);
+    }
+}
